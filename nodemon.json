@@ -1,0 +1,11 @@
+{
+    "name": "chrome extension dev",
+    "watch": ["src", "options.html", "devtools.html", "sidepanel.html", "popup.html"],
+    "ext": "*",
+    "ignore": ["src/**/*.test.*", "dist/", "node_modules/", "src/**/*.png", "src/**/*.jpg", "src/**/*.jpeg", "src/**/*.gif", "src/**/*.svg", "src/**/*.webp", "src/**/*.ico", "src/**/*.mp3", "src/**/*.mp4", "src/**/*.webm", "src/**/*.ogg", "src/**/*.wav"],
+    "events": {
+      "change": "npm run build"
+    },
+    "delay": 1000,
+    "exec": "npm run build"
+  }
