@@ -4,20 +4,22 @@
       <img width="100%" :src="headerImg" class="header-img" alt="" />
     </header>
     <div class="context">
-      <component
-        v-for="tool in [tools[0]]"
-        :key="tool.name"
-        :is="component[tool.component]"
-        :data="tool"
-        @triggle="triggle"
-      ></component>
+      <div class="tools cursor-pointer">
+        <a-tooltip v-for="tool in [tools[0]]" :key="tool.name" :title="tool.desc" color="purple">
+          <component
+            :is="component[tool.component]"
+            :data="tool"
+            @triggle="triggle"
+          ></component>
+        </a-tooltip>
+      </div>
     </div>
   </main>
   <footer></footer>
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import ImgKit from '@/components/toolkits/ImgKit.vue'
 import headBg from '@/assets/img/head-bg.png'
 import { TOOLS } from '@/config/biz.ts'
@@ -101,12 +103,20 @@ body {
 }
 
 .context {
-  border-radius: 35px 35px 0 0;
+  border-radius: 25px 25px 0 0;
   min-height: calc(600px - 148px);
-  display: flex;
   background-color: rgba(188, 188, 188, 0.5);
   backdrop-filter: blur(15px);
+  padding: 8px;
   z-index: 1;
+  .tools {
+    margin: 15px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    cursor: pointer;
+    gap: 10px;
+  }
 }
 
 .transparent-gradient {

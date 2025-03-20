@@ -1,24 +1,28 @@
 export const TOOLS: ReadonlyArray<{name: string; icon: string; desc: string; [propertyName: string]: any}> = [
   {
-    name: '图片资源工具',
+    name: 'imgkit',
+    title: '图片处理工具',
     icon: 'img',
-    desc: '图片自动化抓取、压缩、上传至CDN',
+    desc: '捕捉、压缩、上传',
     component: 'ImgKit',
   },
   {
-    name: '翻译',
+    name: 'translatekit',
+    title: '图片资源工具',
     icon: 'translate',
     desc: '翻译',
     component: 'Translate',
   },
   {
-    name: '图片识别',
+    name: 'ocrkit',
+    title: '图片资源工具',
     icon: 'ocr',
     desc: '识别图片文字',
     component: 'Ocr',
   },
   {
-    name: '语音合成',
+    name: 'voicekit',
+    title: '语音合成',
     icon: 'voice',
     desc: '文字转语音',
     component: 'Tts',

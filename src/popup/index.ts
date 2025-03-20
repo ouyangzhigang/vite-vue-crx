@@ -1,6 +1,9 @@
 import '@/assets/styles/reset.css'
+import '@/assets/styles/variables.less'
+import 'ant-design-vue/dist/reset.css'
 import { createApp } from 'vue'
 
+import Antd from 'ant-design-vue'
 import Popup from './Popup.vue'
 
-createApp(Popup).mount('#app')
+createApp(Popup).use(Antd).mount('#app')

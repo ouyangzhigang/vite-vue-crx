@@ -10,14 +10,14 @@ export default defineManifest({
   version: packageData.version,
   manifest_version: 3,
   icons: {
-    16: 'img/lexin-tool-icon.png',
-    32: 'img/lexin-tool-icon.png',
-    48: 'img/lexin-tool-icon.png',
-    128: 'img/lexin-tool-icon.png',
+    16: 'img/logo.png',
+    32: 'img/logo.png',
+    48: 'img/logo.png',
+    128: 'img/logo.png',
   },
   action: {
     default_popup: 'popup.html',
-    default_icon: 'img/lexin-tool-icon.png',
+    default_icon: 'img/logo.png',
   },
   options_page: 'options.html',
   devtools_page: 'devtools.html',
@@ -37,7 +37,7 @@ export default defineManifest({
   },
   web_accessible_resources: [
     {
-      resources: ['img/logo-16.png', 'img/logo-34.png', 'img/logo-48.png', 'img/logo-128.png', 'img/lexin-tool-icon.png', 'img/*'],
+      resources: ['img/logo-16.png', 'img/logo-34.png', 'img/logo-48.png', 'img/logo-128.png', 'img/logo.png', 'img/*'],
       matches: [],
     },
   ],
