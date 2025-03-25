@@ -21,7 +21,7 @@ $ npm run dev
 ### Chrome Extension Developer Mode
 
 1. set your Chrome browser 'Developer mode' up
-2. click 'Load unpacked', and select `lexin-fe-crx/build` folder
+2. click 'Load unpacked', and select `fe-crx/build` folder
 
 ### Nomal FrontEnd Developer Mode
 
