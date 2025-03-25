@@ -5,12 +5,13 @@
     </header>
     <div class="context">
       <div class="tools cursor-pointer">
-        <a-tooltip v-for="tool in [tools[0]]" :key="tool.name" :title="tool.desc" color="purple">
-          <component
-            :is="component[tool.component]"
-            :data="tool"
-            @triggle="triggle"
-          ></component>
+        <a-tooltip
+          v-for="tool in [tools[0]]"
+          :key="tool.name"
+          :title="tool.desc"
+          :color="tool.color"
+        >
+          <component :is="component[tool.component]" :data="tool" @triggle="triggle"></component>
         </a-tooltip>
       </div>
     </div>

@@ -19,7 +19,7 @@ const srcset = ref(picSvg)
 
 <style lang="less" scoped>
 .picture {
-  padding: 15px 0;
+  padding: 16px 0;
   text-align: center;
   animation: fadeIn 1.5s linear 0s infinite;
 }

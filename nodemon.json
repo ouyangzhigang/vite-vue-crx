@@ -6,6 +6,6 @@
     "events": {
       "change": "npm run build"
     },
-    "delay": 1000,
+    "delay": 3000,
     "exec": "npm run build"
   }

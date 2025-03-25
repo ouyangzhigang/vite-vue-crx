@@ -1,5 +1,3 @@
-import '@/assets/styles/reset.css'
-import '@/assets/styles/variables.less'
 import 'ant-design-vue/dist/reset.css'
 import { createApp } from 'vue'
 

@@ -10,14 +10,14 @@ export default defineManifest({
   version: packageData.version,
   manifest_version: 3,
   icons: {
-    16: 'img/logo.png',
-    32: 'img/logo.png',
-    48: 'img/logo.png',
-    128: 'img/logo.png',
+    16: 'img/log-removebg-preview.png',
+    32: 'img/log-removebg-preview.png',
+    48: 'img/log-removebg-preview.png',
+    128: 'img/log-removebg-preview.png',
   },
   action: {
     default_popup: 'popup.html',
-    default_icon: 'img/logo.png',
+    default_icon: 'img/log-removebg-preview.png',
   },
   options_page: 'options.html',
   devtools_page: 'devtools.html',
@@ -37,7 +37,7 @@ export default defineManifest({
   },
   web_accessible_resources: [
     {
-      resources: ['img/logo-16.png', 'img/logo-34.png', 'img/logo-48.png', 'img/logo-128.png', 'img/logo.png', 'img/*'],
+      resources: ['img/logo-16.png', 'img/logo-34.png', 'img/logo-48.png', 'img/logo-128.png', 'img/log-removebg-preview.png', 'img/*'],
       matches: [],
     },
   ],

@@ -15,14 +15,18 @@ export default defineConfig(({ mode, command, ...rest }) => {
   const isbuild = command === 'build'
 
   return {
-    // css: {
-    //   preprocessorOptions: {
-    //     css: {
-    //       additionalData: `@import "./src/assets/styles/reset.css";`,
-    //       javascriptEnabled: true,
-    //     },
-    //   },
-    // },
+    css: {
+      preprocessorOptions: {
+        css: {
+          additionalData: `@import "./src/assets/styles/reset.css";`,
+          javascriptEnabled: true,
+        },
+        less: {
+          additionalData: `@import "./src/assets/styles/variables.less";`,
+          javascriptEnabled: true,
+        }
+      },
+    },
     build: {
       cssCodeSplit: true,
       emptyOutDir: production && isbuild,

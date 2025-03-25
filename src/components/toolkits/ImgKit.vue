@@ -1,22 +1,38 @@
 <template>
   <section class="img-kit-component">
-    <h1 class="h3 text-center">{{ name }}</h1>
+    <h1 class="h3 text-center" :style="{ color: conflictColor, background: color }">
+      {{ name }}
+    </h1>
     <div class="img p-8">
       <PictureImg :src="src" />
     </div>
-    <div class="description">{{ desc }}</div>
+    <div class="description">{{ title }}</div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import PictureImg from '@/components/common/Pic.vue'
 
 const props = defineProps(['data'])
 
 const name = ref(props.data.name)
 const src = ref(props.data.src)
-const desc = ref(props.data.desc)
+const title = ref(props.data.title)
+const color = ref(props.data.color || 'rgba(255, 255, 255, 0.25)')
+
+const conflictColor = computed(() => {
+  console.log('color.value', color.value)
+  const arr = color.value.split(',').map((v: string) => {
+    return v.replace(/\D+/, '')
+  })
+  arr.length = 3
+  return `rgb(${arr
+    .map((v: number) => {
+      return 255 - v
+    })
+    .join(',')})`
+})
 </script>
 
 <style lang="less" scoped>
@@ -44,7 +60,7 @@ const desc = ref(props.data.desc)
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px auto;
+    margin: 3px auto 5px;
     width: calc(100% - 8px);
   }
   .description {

@@ -5,6 +5,7 @@ export const TOOLS: ReadonlyArray<{name: string; icon: string; desc: string; [pr
     icon: 'img',
     desc: '捕捉、压缩、上传',
     component: 'ImgKit',
+    color: 'rgba(0, 255, 255, 0.35)'
   },
   {
     name: 'translatekit',
