@@ -1,4 +1,4 @@
-# lexin-fe-crx
+# fe-crx
 
 > a chrome extension tools built with Vite + Vue, and Manifest v3
 
