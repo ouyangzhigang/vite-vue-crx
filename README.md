@@ -13,7 +13,7 @@
 run the command
 
 ```shell
-$ cd lexin-fe-crx
+$ cd fe-crx
 
 $ npm run dev
 ```
